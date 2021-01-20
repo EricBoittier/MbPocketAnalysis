@@ -1,0 +1,14 @@
+parm 1011.psf 
+
+for TRAJ in dcds/*dyna*.dcd i=1;i++1
+  trajin dcds/cons-0111-dyna-$i.dcd
+done
+
+vector center :89,93,104,138,142,146,HEME&!:TIP3 out xe1.dat
+vector center :72,104,107,108,135,138,139,HEME&!:TIP3 out xe2.dat
+vector center :7,75,76,80,82,134,137,138,HEME&!:TIP3 out xe3.dat
+vector center :25,28,29,65,68,72,107,111&!:TIP3 out xe4.dat
+vector center :29,46,64,68,107,HEME&!:TIP3 out heme.dat
+
+run
+

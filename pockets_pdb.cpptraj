@@ -1,0 +1,14 @@
+parm 1011.psf 
+
+for TRAJ in dcds/*dyna*-1.dcd i=1;i++1
+  trajin dcds/cons-0111-dyna-$i.dcd 1 2
+done
+
+mask :89,93,104,138,142,146,HEME&!:TIP3 maskpdb xe1.pdb
+mask :72,104,107,108,135,138,139,HEME&!:TIP3 maskpdb xe2.pdb
+mask :7,75,76,80,82,134,137,138,HEME&!:TIP3 maskpdb xe3.pdb
+mask :25,28,29,65,68,72,107,111&!:TIP3 maskpdb xe4.pdb
+mask :29,46,64,68,107,HEME&!:TIP3 maskpdb heme.pdb
+
+run
+

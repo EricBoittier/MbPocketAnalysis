@@ -1,0 +1,10 @@
+parm 1011.psf 
+
+for TRAJ in dcds/*dyna*dcd i=1;i++1
+  trajin dcds/cons-0111-dyna-$i.dcd
+done
+
+vector  center :XE1 out xyz.dat
+
+run
+
